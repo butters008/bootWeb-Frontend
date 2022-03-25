@@ -1,0 +1,158 @@
+/* General CSS */
+body{
+    background-color: rgb(20, 20, 20);
+}
+.main_container{
+    margin: auto;
+    width: 55%;
+    min-width: 1000px;
+    /* min-height: auto; */
+    background-color: rgb(54, 53, 53);
+    /* border-radius: 5px; */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.white_text{
+    color: white;
+}
+
+.light_grey_text{
+    color: rgb(119, 119, 119);
+    font-size: 18px;
+}
+/* ----------------------------------------- */
+/* Session1 css ---------------------------- */
+.header{
+    display: flex;
+
+}
+
+
+.header_flex_container{
+    flex: 4;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 200px;
+    width: auto;
+   
+}
+
+#image_box{
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 5px;
+}
+
+#basicInfo h1{
+    font-size: 28px;
+    margin-bottom: 0%;
+}
+
+#basicInfo p{
+    font-size: 16px;
+    margin-top: 0%;
+    color: rgb(61, 121, 250);
+}
+
+#outline_generalInfo{
+    text-align: right;
+    list-style-type: none;
+    width: fit-content;
+}
+
+#text_generalInfo ul{
+    padding-left: 5px;
+}
+
+#bio{
+    padding: 0px 15px;
+}
+
+/* -------------------------------------- */
+/* aside CSS */
+.aside{
+    float: right;
+    width: 30%;
+    background-color: rgb(54, 53, 53);
+
+}
+
+.aside_containers{
+   min-height: 100px;
+   min-width: 100px; 
+   flex-direction: column;
+}
+
+.progress_bar_container{
+    background-color: aliceblue;
+    width: 80%;
+    border-radius: 5px;
+}
+
+.progress_bar{
+    /* background-color: rgb(116, 194, 92); */
+    color: white;
+    padding: 1%;
+    text-align: right;
+    font-size: 10px;
+    border-radius: 5px;
+}
+
+.skill1{
+    background-color: rgb(223, 138, 10);
+    width: 80%;
+}
+.skill2{
+    background-color: rgb(179, 26, 15);
+    width: 90%;
+}
+.skill3{
+    background-color: rgb(20, 159, 201);
+    width: 70%;
+}
+.skill4{
+    background-color: rgb(116, 129, 1);
+    width: 40%;
+}
+.skill5{
+    background-color: rgb(5, 179, 19);
+    width: 80%;
+}
+
+.aside_containers li{
+    padding-bottom: 10px;
+}
+
+#graphic1{
+    color: rgb(216, 0, 0);
+    font-size: 36px;
+}
+
+#graphic2{
+    color: rgb(0, 214, 230);
+    font-size: 36px;
+}
+
+#graphic3{
+    color: rgb(0, 192, 10);
+    font-size: 36px;
+}
+
+#graphic4{
+    color: rgb(140, 0, 153);
+    font-size: 36px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-filled {
+    background-color: red;
+}

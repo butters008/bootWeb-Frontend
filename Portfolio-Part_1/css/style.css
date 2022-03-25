@@ -1,0 +1,67 @@
+/* General CSS */
+body{
+    background-color: rgb(20, 20, 20);
+}
+.main_container{
+    margin: auto;
+    width: 55%;
+    min-width: 1000px;
+    background-color: rgb(54, 53, 53);
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.white_text{
+    color: white;
+}
+
+.light_grey_text{
+    color: rgb(119, 119, 119);
+}
+/* ----------------------------------------- */
+/* Session1 css ---------------------------- */
+.header{
+    display: flex;
+}
+
+.header_flex_container{
+    flex: 4;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 200px;
+    width: auto;
+   
+}
+
+#image_box{
+    text-align: center;
+    padding-top: 10px;
+}
+
+#basicInfo h1{
+    font-size: 28px;
+    margin-bottom: 0%;
+}
+
+#basicInfo p{
+    font-size: 16px;
+    margin-top: 0%;
+    color: rgb(61, 121, 250);
+}
+
+#outline_generalInfo{
+    text-align: right;
+    list-style-type: none;
+    width: fit-content;
+}
+
+#text_generalInfo ul{
+    padding-left: 5px;
+}
+
+#bio{
+    padding: 0px 15px;
+}
+
+/* -------------------------------------- */
+/* aside CSS */
