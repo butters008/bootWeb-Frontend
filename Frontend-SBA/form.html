@@ -1,0 +1,73 @@
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous">
+</script>
+
+<script>
+$(document).ready(function() { $('#header').load('header.html'); });
+
+function validate(){
+    let name = document.getElementById('firstNameId').value;
+    console.log("It worked");
+}
+
+</script>
+
+<div id="header"></div>
+<main>
+    <div class="display-4 d-flex justify-content-center">
+        <strong>Sign up</strong> 
+    </div><br><br>
+    <form class="form-signin">
+        <div class="container ">
+            <div class="row d-flex justify-content-center customFormContainerStyle">
+                <div class="col col-4 text-center">
+                    <label for="firstName"><strong>First Name</strong></label>
+                    <input class="form-control" type="text" name="firstName" id="firstName" placeholder="John">
+                    <div id="errorFname"></div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center customFormContainerStyle">
+                <div class="col col-4 text-center">
+                    <label for="lastName"><strong>Last Name</strong></label>
+                    <input class="form-control" type="text" name="lastName" id="lastName" placeholder="John">
+                    <div id="errorLname"></div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center customFormContainerStyle">
+                <div class="col col-4 text-center">
+                    <label for="email"><strong>email</strong></label>
+                    <input class="form-control" type="text" name="email" id="email" placeholder="John@john.com">
+                    <div id="errorEmail"></div>        
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center customFormContainerStyle">
+                <div class="col col-4 text-center">
+                    <label for="password"><strong>Password</strong></label>
+                    <input class="form-control" onfocusout="validatePassword()" type="password" name="password" id="password" placeholder="password">
+                    <span id="errorPassword"></span>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center customFormContainerStyle">
+                <div class="col col-4 text-center">
+                    <label for="confirmPassword"><strong>Confirm Password</strong></label>
+                    <input class="form-control" type="password" name="confirmPassword" id="confirmPassword" placeholder="confirmPassword">        
+                </div>
+            </div>
+        </div><br>
+        <div class="col-1 mx-auto">
+            <button class="btn btn=lg btn-primary btn-block" type="submit" id="login">submit</button>
+        </div>
+
+    </form>
+    <div class="text-center">Already have an account? <br><a href="login.html">Login</a></div>
+    
+    <script src="js/formLogic.js"></script>        
+
+</main>
+
+    
+</body>
+</html>
+

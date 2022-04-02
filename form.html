@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+</head>
+<body>
+    <form class="form-signin">
+        <div class="container">
+            <label for="firstName">First Name</label>
+            <input class="form-control" type="text" name="firstName" id="firstName" placeholder="John">
+            <div id="errorFname"></div>
+        </div>
+        <div class="container">
+            <label for="lastName">Last Name</label>
+            <input class="form-control" type="text" name="lastName" id="lastName" placeholder="John">
+            <div id="errorLname"></div>
+        </div>
+        <div class="container">
+            <label for="email">email</label>
+            <input class="form-control" type="text" name="email" id="email" placeholder="John@john.com">
+            <div id="errorEmail"></div>
+        </div>
+        <div class="container">
+            <label for="password">Password</label>
+            <input class="form-control" type="password" name="password" id="password" placeholder="password">
+            <span id="errorPassword"></span>
+        </div>
+        <div class="container">
+            <label for="confirmPassword">Confirm Password</label>
+            <input class="form-control" type="password" name="confirmPassword" id="confirmPassword" placeholder="confirmPassword">
+        </div>
+
+        <button class="btn btn=lg btn-primary btn-block" type="submit" id="login">submit</button>
+    </form>
+    
+    <script src="formLogic.js"></script>
+</body>
+</html>
+
