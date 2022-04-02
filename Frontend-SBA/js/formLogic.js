@@ -26,6 +26,8 @@ const validatePassword = () =>{
 
             //local debug
             console.log("Passed");
+
+            return true;
         }
         else{
             error.textContent = "Needs have letters and numbers in password";
@@ -45,7 +47,28 @@ const validatePassword = () =>{
 }
 
 const validateConfirmPassword = () =>{
+    let pass1 = document.getElementById('password').value;
+    let pass2 = document.getElementById('confirmPassword').value;
+    let error = document.getElementById("errorConfirmPassword");
 
+    console.log(pass1);
+    console.log(pass2);
+    
+    if (pass1 === pass2)
+    {
+        error.textContent = ""
+        
+        //local debug
+        console.log("Passed");
+
+        return true;
+    } else {
+        error.textContent = "Please enter a valid Email"
+        error.style.color = "red"
+
+        //local debug
+        console.log("Failed");
+    }
 }
 
 const validateEmail = () =>{
@@ -71,6 +94,8 @@ const validateEmail = () =>{
         
         //local debug
         console.log("Passed");
+
+        return true;
     }
 
 }
@@ -98,6 +123,8 @@ const validateFirstName = () => {
 
         //local debug
         console.log("Passed");
+
+        return true;
     }
 }
 
@@ -105,7 +132,7 @@ const validateLastName = () =>{
     //Define variables
     let re = new RegExp("[0-9, /\s/g]");
     let error = document.getElementById("errorLname")
-    const lName = document.getElementById("lastName").value;
+    let lName = document.getElementById("lastName").value;
     let result = re.test(lName);
 
     //local debug
@@ -131,47 +158,34 @@ const validateLastName = () =>{
     }
 }
 
-// const mainValidateFunction = (e) => {
-//     e.preventDefault();
-//     let fNameCheck = validateFirstName();
-//     let lNameCheck = validateLastName();
-//     let emailCheck = validateEmail();
-//     let passwordCheck = validatePassword();
-//     let confirmPasswordCheck = validateConfirmPassword();
-
-//     // local debug
-//     console.log("fNameCheck " + fNameCheck);
-//     console.log("lNameCheck " + lNameCheck);
-//     console.log("emialCheck " + emailCheck);
-//     console.log("passwordCheck " + passwordCheck);
-//     console.log("confirmPasswordCheck " + confirmPasswordCheck);
-
-// }
-
-const mainValidateFunction = () => {
-    const flagStop = true;
+const mainValidateFunction = (e) => {
+    e.preventDefault();
     let fNameCheck = validateFirstName();
     let lNameCheck = validateLastName();
     let emailCheck = validateEmail();
     let passwordCheck = validatePassword();
     let confirmPasswordCheck = validateConfirmPassword();
 
-    //local debug
-    console.log("Inside Function");
-
-
-    while(flagStop){
     // local debug
-    console.log("Figureing out the logic");
     console.log("fNameCheck " + fNameCheck);
     console.log("lNameCheck " + lNameCheck);
     console.log("emialCheck " + emailCheck);
     console.log("passwordCheck " + passwordCheck);
     console.log("confirmPasswordCheck " + confirmPasswordCheck);
+    if(
+        fNameCheck == true &&
+        lNameCheck == true &&
+        emailCheck == true &&
+        passwordCheck == true &&
+        confirmPasswordCheck == true
+    ){
+        console.log("Passed");
+        window.location.href = 'web.html';
     }
-
-
-
+    else{
+        alert("Failed to submit, please enter correct information");
+        window.location.href = 'register.html';
+    }
 }
 
 submit.addEventListener("click",mainValidateFunction);

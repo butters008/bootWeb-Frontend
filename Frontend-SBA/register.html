@@ -15,11 +15,11 @@ function validate(){
 </script>
 
 <div id="header"></div>
-<main onload="mainValidateFunction()">
+<main>
     <div class="display-4 d-flex justify-content-center">
         <strong>Sign up</strong> 
     </div><br><br>
-    <form class="form-signin" >
+    <form class="form-signin" action="web.html">
         <div class="container ">
             <div class="row d-flex justify-content-center customFormContainerStyle">
                 <div class="col col-4 text-center">
@@ -52,7 +52,8 @@ function validate(){
             <div class="row d-flex justify-content-center customFormContainerStyle">
                 <div class="col col-4 text-center">
                     <label for="confirmPassword"><strong>Confirm Password</strong></label>
-                    <input class="form-control" type="password" name="confirmPassword" id="confirmPassword" placeholder="confirmPassword">        
+                    <input class="form-control" onfocusout="validateConfirmPassword()" type="password" name="confirmPassword" id="confirmPassword" placeholder="confirmPassword">
+                    <span id="errorConfirmPassword"></span>        
                 </div>
             </div>
         </div><br>
@@ -63,35 +64,7 @@ function validate(){
     </form>
     <div class="text-center">Already have an account? <br><a href="login.html">Login</a></div>
     
-    <script src="js/formLogic.js"></script>
-    <script>
-        const flagStop = true;
-        let fNameCheck = validateFirstName();
-        let lNameCheck = validateLastName();
-        let emailCheck = validateEmail();
-        let passwordCheck = validatePassword();
-        let confirmPasswordCheck = validateConfirmPassword();
-
-    //local debug
-    console.log("Inside Function");
-        let count = 0
-
-    while(flagStop){
-    // local debug
-    console.log("Figureing out the logic");
-    console.log("fNameCheck " + fNameCheck);
-    console.log("lNameCheck " + lNameCheck);
-    console.log("emialCheck " + emailCheck);
-    console.log("passwordCheck " + passwordCheck);
-    console.log("confirmPasswordCheck " + confirmPasswordCheck);
-    count++
-    if(count == 3){
-        flagStop == false
-    }
-
-    }
- 
-    </script>        
+    <script src="js/formLogic.js"></script>    
 
 </main>
 
