@@ -10,9 +10,41 @@ $(document).ready(function() { $('#header').load('header.html'); });
 
 <div id="header"></div>
 <main>
+  <table class="table">
+    <thead>
+      <tr class="table-dark">
+        <th scope="col">Animal first ID</th>
+        <th scope="col">Type</th>
+        <th scope="col">Paired With</th>
+        <th scope="col">Calved</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+<script>
+  //Making a local list for cows
+  let arr = [
+    {id: 1, type:"cow", bull:"BT", calf:"no"},
+    {id: 2, type:"cow", bull:"BT", calf:"yes"},
+    {id: 3, type:"cow", bull:"Duke", calf:"yes"},
+    {id: 4, type:"cow", bull:"BT", calf:"yes"},
+  ];
+
+  let table = document.getElementById("myTable"); 
+
+  for(let i = 0; i < arr.length; i++){
+    let row = `<tr class="table-success">
+      <th>${arr[i].id}</th>
+      <td>${arr[i].type}</td>
+      <td>${arr[i].bull}</td>
+      <td>${arr[i].calf}</td>`;
+    table.innerHTML += row;
+  }
+
+</script>
+    </tbody>
+  </table>  
 
 </main>
 
-    
 </body>
 </html>
