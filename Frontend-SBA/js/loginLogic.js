@@ -1,7 +1,7 @@
 const submit = document.getElementById("login");
 
 const validatePassword = () =>{
-    //Define variables
+    
     const password = document.getElementById('password').value;
     let error = document.getElementById("errorPassword");
     const regCheck1 = new RegExp("[a-zA-Z]+");
