@@ -25,3 +25,8 @@ main{
 .header{
     width: 60;
 }
+
+.selector{
+    width: 60%;
+    margin: auto;
+}
