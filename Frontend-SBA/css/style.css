@@ -55,9 +55,16 @@ main{
     border-radius: 5px;
 }
 
-.mainContent{
+#mainContent{
     background-color: #042331;
+    grid-area: mainContent;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    /* width: 60%; */
 }
-.sideContent{
+#sideContent{
     background-color: aqua;
+    grid-area: sideContent;
+    display: flex;
 }

@@ -64,6 +64,7 @@ const validateFirstName = () => {
     let error = document.getElementById("errorFname")
     const fName = document.getElementById("firstName").value;
     let result = re.test(fName);
+    console.log(result);
     if (result == true) {
         error.textContent = "Please enter a valid Name"
         error.style.color = "red"
