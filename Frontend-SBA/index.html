@@ -12,16 +12,19 @@ $(document).ready(function() { $('#header').load('header.html'); });
 
 
 <main>
-  <table class="table">
-    <thead>
-      <tr class="table-dark">
-        <th scope="col">Animal first ID</th>
-        <th scope="col">Type</th>
-        <th scope="col">Paired With</th>
-        <th scope="col">Calved</th>
-      </tr>
-    </thead>
-    <tbody id="myTable">
+  <div class="girdContainer">
+    <div id="mainContent">
+      <table class="table">
+        <thead>
+          <tr class="table-dark">
+            <th scope="col">Animal first ID</th>
+            <th scope="col">Type</th>
+            <th scope="col">Paired With</th>
+            <th scope="col">Calved</th>
+          </tr>
+        </thead>
+        <tbody id="myTable">
+
 <script>
   //Making a local list for cows
   let arr = [
@@ -41,17 +44,23 @@ $(document).ready(function() { $('#header').load('header.html'); });
       <td>${arr[i].calf}</td>`;
     table.innerHTML += row;
   }
-
 </script>
-    </tbody>
-  </table>  
+
+        </tbody>
+      </table>      
+    </div><!-- End of Main Content in Grid -->
+    <div id="sideContent">
+      <select name="FarmType" id="FarmTypeId">
+        <option value="herd">Herd</option>
+        <option value="herd">Cow</option>
+        <option value="herd">Bull</option>
+      </select>  
+    </div>  
+  </div><!-- End of Grid Content -->
+  <br>
+  <hr style="border-color: rgb(0, 0, 0, .2); border-width: 1px; border-radius: 5px;">
+  <br>
 
 </main>
-<footer class="footer" style="margin: auto;">
-  <select name="dropdown" id="dropdown" >
-      <option value="login">Cow</option>
-      <option value="register">Register</option>
-  </select>
-</footer>
 </body>
 </html>
