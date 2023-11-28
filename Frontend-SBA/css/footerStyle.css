@@ -1,0 +1,8 @@
+.footerContainer {
+  width: 62%;
+  min-height: 10%;
+  background-color: black;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 1px -5px 5px rgb(163, 227, 248);
+}

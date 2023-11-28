@@ -1,0 +1,131 @@
+<div class="girdContainer">
+    <div id="mainContent">
+      <table class="table">
+        <thead>
+          <tr class="table-dark">
+            <th scope="col">Animal first ID</th>
+            <th scope="col">Type</th>
+            <th scope="col">Paired With</th>
+            <th scope="col">Calved</th>
+          </tr>
+        </thead>
+        <tbody id="myTable">
+
+<script>
+  //Making a local list for cows
+  let arr = [
+    {id: 1, type:"cow", bull:"BT", calf:"no"},
+    {id: 2, type:"cow", bull:"BT", calf:"yes"},
+    {id: 3, type:"cow", bull:"Duke", calf:"yes"},
+    {id: 4, type:"cow", bull:"BT", calf:"yes"}
+  ];
+
+  let table = document.getElementById("myTable"); 
+
+  for(let i = 0; i < arr.length; i++){
+    let row = `<tr class="table-success">
+      <th>${arr[i].id}</th>
+      <td>${arr[i].type}</td>
+      <td>${arr[i].bull}</td>
+      <td>${arr[i].calf}</td>`;
+    table.innerHTML += row;
+  }
+</script>
+
+        </tbody>
+      </table>      
+    </div><!-- End of Main Content in Grid -->
+  </div><!-- End of Grid Content -->
+
+
+
+:root {
+  --baseColor: rgb(0, 74, 143);
+  --secondaryColor: rgb(224, 153, 0);
+  --otherColor: rgb(255, 255, 255);
+  --overlayColor: rgb(127, 250, 234);
+  --actionColor: rgb(0, 153, 33);
+  --menuColor: #042331;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: var(--baseColor);
+  margin-top: 0;
+  /* font-family: 'Noto Sans', sans-serif; */
+}
+
+main {
+  background-color: var(--otherColor);
+  width: 60%;
+  min-height: 300px;
+  margin: auto;
+  /* border-radius: 10px; */
+}
+
+.customFormButton {
+  margin: auto;
+}
+
+.customFormContainerStyle {
+  margin-bottom: 10px;
+}
+
+.header {
+  width: 60;
+}
+
+.selector {
+  width: 60%;
+  margin: auto;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.5fr;
+  grid-template-rows: 1fr 4fr 3fr 2fr;
+  grid-template-areas:
+    "mainContent mainContent sideContent"
+    "mainContent mainContent sideContent"
+    "farmInfo herdInfo AdditionalInfo";
+  height: 100vh;
+  gap: 0.5em;
+  margin: 1em;
+  color: var(--otherColor);
+  border-radius: 5px;
+}
+
+#mainContent {
+  /* background-color: #042331; */
+  grid-area: mainContent;
+  display: flex;
+  /* justify-content: center;
+    align-items: center; */
+  /* width: 60%; */
+}
+#sideContent {
+  background-color: aqua;
+  grid-area: sideContent;
+  display: flex;
+}
+
+
+    <div class="container ">
+        <div class="row d-flex justify-content-center customFormContainerStyle">
+            <div class="col col-4 text-center">
+                <label for="email"><strong>email</strong></label>
+                <input class="form-control" type="text" name="email" id="email" placeholder="John@john.com">
+                <div id="errorEmail"></div>        
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center customFormContainerStyle">
+            <div class="col col-4 text-center">
+                <label for="password"><strong>Password</strong></label>
+                <input class="form-control" onfocusout="validatePassword()" type="password" name="password" id="password" placeholder="password">
+                <span id="errorPassword"></span>
+            </div>
+        </div>
+    </div><br>
+    <div class="col-1 mx-auto">
+        <button class="btn btn=lg btn-primary btn-block" type="submit" id="login">submit</button>
+    </div>

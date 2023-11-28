@@ -1,131 +1,134 @@
-header{
-    width: 60%; 
-    margin: auto; 
-    height: 100px; 
-    text-align: center; 
-    position: relative;
-    background-color: var(--otherColor);
-    display: flex;
-    margin-top: 0;
-    padding-top: 15px;
-    justify-content: center;
-
+header {
+  width: 62%;
+  margin: auto;
+  height: 150px;
+  text-align: center;
+  position: relative;
+  background-color: var(--otherColor);
+  display: flex;
+  margin-top: 0;
+  padding-top: 35px;
+  padding-bottom: 15px;
+  /* margin-bottom: 10px; */
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 1px 15px 15px rgb(163, 227, 248);
 }
-.logo{
-    flex: 1;
-    align-items: center;
-    overflow: hidden;
-    padding-left: 15px; 
+.logo {
+  flex: 1;
+  overflow: hidden;
 }
-.companyName{
-    flex: 2;
-    flex-direction: row;
-    text-align: left;
-    padding-left: 15px;
+.companyName {
+  flex: 2;
+  flex-direction: row;
+  text-align: left;
+  padding-left: 15px;
 }
-.siteLogo{
-    border-radius: 5px; 
-
-}
-
-section{
-    height: 100%;
-    transition: all 1s;
+.siteLogo {
+  border-radius: 5px;
 }
 
-nav{
-    position: fixed;
-    left: -255px;
-    top: 0;
-    width: 250px;
-    height:100%;
-    background: var(--menuColor);
-    transition: all 1s;
+section {
+  height: 100%;
+  transition: all 1s;
 }
 
-.navHeader{
-    font-size: 22px;
-    color: var(--otherColor);;
-    text-align: center;
-    line-height: 70px;
-    /* background: #042331; */
-    user-select: none;
+nav {
+  position: fixed;
+  left: -280px;
+  top: 0;
+  width: 275px;
+  height: 100%;
+  background: var(--menuColor);
+  transition: all 1s;
 }
-nav li{
-    list-style: none;
+
+.navHeader {
+  font-size: 22px;
+  color: var(--otherColor);
+  text-align: center;
+  line-height: 70px;
+  /* background: #042331; */
+  user-select: none;
+}
+nav li {
+  list-style: none;
 }
 nav ul a {
-    display: block;
-    width: 100%;
-    line-height: 65px;
-    font-size: 20px;
-    color: var(--otherColor);
-    padding-left: 40px;
-    box-sizing: border-box;
-    border-bottom: 1px solid black;
-    border-top: 1px solid rgba(255, 255, 255 ,.1);
-    transition: .4s ease;
-    text-decoration: none;
+  display: block;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: var(--otherColor);
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.4s ease;
+  text-decoration: none;
 }
 
 ul li:hover a {
-    padding-left: 50px;
+  padding-left: 50px;
 }
 
 nav ul a i {
-    margin-right: 16px;
+  margin-right: 16px;
 }
 
-#check{
-    display: none;
+#check {
+  display: none;
 }
 
-label #menuBtn, label #menuCancel{
-    position: absolute;
-    cursor: pointer;
-    background: var(--secondaryColor);
-    border-radius: 3px;    
+label #menuBtn,
+label #menuCancel {
+  position: absolute;
+  cursor: pointer;
+  background: var(--secondaryColor);
+  border-radius: 3px;
 }
 
-label #menuBtn{
-    left: 40px;
-    top: 16px;
-    font-size: 35px;
-    color: var(--otherColor);;
-    padding: 6px 12px;
-    transition: all .5s;
-    position: fixed;
+label #menuBtn {
+  left: 40px;
+  top: 16px;
+  font-size: 35px;
+  color: var(--otherColor);
+  padding: 6px 12px;
+  transition: all 0.5s;
+  position: fixed;
 }
 
-label #menuCancel{
-    z-index: 1111;
-    left: -215px;
-    top: 7px;
-    font-size: 15px;
-    color: var(--otherColor);;
-    padding: 4px 9px;
-    opacity: 0;
-    transition: all 1s;
-    position: fixed;
-    pointer-events: none;
+label #menuCancel {
+  z-index: 1111;
+  left: -215px;
+  top: 7px;
+  font-size: 15px;
+  color: var(--otherColor);
+  padding: 4px 9px;
+  opacity: 0;
+  transition: all 1s;
+  position: fixed;
+  pointer-events: none;
 }
 
-#check:checked ~ nav{
-    left: 0;
+#check:checked ~ nav {
+  left: 0;
 }
 
-#check:checked ~ label #menuBtn{
-    left: 300px;
-    opacity: 0;
-    pointer-events: none;
+#check:checked ~ label #menuBtn {
+  left: 300px;
+  opacity: 0;
+  pointer-events: none;
 }
 
-#check:checked ~ label #menuCancel{
-    left: 215px;
-    opacity: 1;
-    pointer-events: visible;
+#check:checked ~ label #menuCancel {
+  left: 215px;
+  opacity: 1;
+  pointer-events: visible;
 }
 
-#check:checked ~ section{
-    margin-left: 250px;
+#check:checked ~ section {
+  margin-left: 250px;
 }

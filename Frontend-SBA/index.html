@@ -6,61 +6,47 @@
 
 <script>
 $(document).ready(function() { $('#header').load('header.html'); });
+$(document).ready(function() { $('#footer').load('footer.html'); });
 </script>
 
-<div id="header"></div>
 
-
-<main>
-  <div class="girdContainer">
-    <div id="mainContent">
-      <table class="table">
-        <thead>
-          <tr class="table-dark">
-            <th scope="col">Animal first ID</th>
-            <th scope="col">Type</th>
-            <th scope="col">Paired With</th>
-            <th scope="col">Calved</th>
-          </tr>
-        </thead>
-        <tbody id="myTable">
+<script src="js/User.js"></script>
+<script src="js/UserFakeAuth.js"></script>
 
 <script>
-  //Making a local list for cows
-  let arr = [
-    {id: 1, type:"cow", bull:"BT", calf:"no"},
-    {id: 2, type:"cow", bull:"BT", calf:"yes"},
-    {id: 3, type:"cow", bull:"Duke", calf:"yes"},
-    {id: 4, type:"cow", bull:"BT", calf:"yes"}
-  ];
-
-  let table = document.getElementById("myTable"); 
-
-  for(let i = 0; i < arr.length; i++){
-    let row = `<tr class="table-success">
-      <th>${arr[i].id}</th>
-      <td>${arr[i].type}</td>
-      <td>${arr[i].bull}</td>
-      <td>${arr[i].calf}</td>`;
-    table.innerHTML += row;
+  let userLoggedIn = localStorage.getItem("correctUser")
+  console.log(localStorage.getItem("correctUser"))
+  console.log(userLoggedIn)
+  if(userLoggedIn === 'false' || userLoggedIn === null){
+    console.log("Move to login page")
+    window.location.href = "login.html";
+  }
+  else if(userLoggedIn === 'true'){
+    console.log("Fake login worked")
   }
 </script>
 
-        </tbody>
-      </table>      
-    </div><!-- End of Main Content in Grid -->
-    <div id="sideContent">
-      <select name="FarmType" id="FarmTypeId">
-        <option value="herd">Herd</option>
-        <option value="herd">Cow</option>
-        <option value="herd">Bull</option>
-      </select>  
-    </div>  
-  </div><!-- End of Grid Content -->
-  <br>
-  <hr style="border-color: rgb(0, 0, 0, .2); border-width: 1px; border-radius: 5px;">
-  <br>
+<!-- Need this here for the JQuery to work with header.html and index.html -->
+<div id="header"></div>
 
+<main class="mainContainer">
+  <!-- Going to have 3 sections, 
+    LEFT -> will be the form to input the animal
+    RIGHT -> will be the list of all the animals 
+    TOP - Will be the count of total herd, cow, bull, and calf count 
+  -->
+  <div class="TOP">
+    test
+    <button onclick="checkCredentials('JohnDoe', 'password')">login</button>
+  </div>
+  <div class="LEFT">
+
+  </div>
+  <div class="RIGHT"></div>
+  
 </main>
 </body>
+<!-- Need this here for the JQuery to work with footer.html and index.html -->
+<div id="footer"></div>
+
 </html>
