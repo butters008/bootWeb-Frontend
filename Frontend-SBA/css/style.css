@@ -1,70 +1,40 @@
-:root{
-    --baseColor: rgb(0, 74, 143);
-    --secondaryColor: rgb(224, 153, 0);
-    --otherColor: rgb(255, 255, 255);
-    --overlayColor: rgb(127, 250, 234);
-    --actionColor: rgb(0, 153, 33);
-    --menuColor: #042331;
-    font-family: 'Roboto', sans-serif;
+:root {
+  --baseColor: rgb(0, 74, 143);
+  --secondaryColor: rgb(224, 153, 0);
+  --otherColor: rgb(255, 255, 255);
+  --overlayColor: rgb(127, 250, 234);
+  --actionColor: rgb(0, 153, 33);
+  --menuColor: #042331;
+  font-family: "Roboto", sans-serif;
 }
 
-body{
-    background-color: var(--baseColor);
-    margin-top: 0;
-    /* font-family: 'Noto Sans', sans-serif; */
-
+body {
+  background-color: var(--baseColor);
+  margin-top: 0;
+  /* font-family: "Noto Sans", sans-serif; */
 }
 
-main{
-    background-color: var(--otherColor);
-    width: 60%;
-    min-height: 300px;
-    margin: auto;
-    /* border-radius: 10px; */
+.mainContainer {
+  background-color: var(--otherColor);
+  width: 60%;
+  min-height: 10%;
+  margin: auto;
+  padding-top: 2em;
+  display: grid;
 }
 
-.customFormButton{
-    margin: auto;
+/* This is for the loginForm */
+.formContainer {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center, space-between;
+  flex-direction: column;
 }
 
-.customFormContainerStyle{
-    margin-bottom: 10px;
-}
-
-.header{
-    width: 60;
-}
-
-.selector{
-    width: 60%;
-    margin: auto;
-}
-
-.gridContainer{
-    display: grid;
-    grid-template-columns: 2fr 1.2fr 1.5fr;
-    grid-template-rows: 1fr 4fr 3fr 2fr;
-    grid-template-areas: 
-        "mainContent mainContent sideContent"
-        "mainContent mainContent sideContent"
-        "farmInfo herdInfo AdditionalInfo";
-    height: 100vh;
-    gap: 0.5em;
-    margin: 1em;
-    color: var(--otherColor);
-    border-radius: 5px;
-}
-
-#mainContent{
-    background-color: #042331;
-    grid-area: mainContent;
-    display: flex;
-    /* justify-content: center;
-    align-items: center; */
-    /* width: 60%; */
-}
-#sideContent{
-    background-color: aqua;
-    grid-area: sideContent;
-    display: flex;
+.formInput {
+  font-size: larger;
+  text-align: center;
+  border-radius: 3px;
+  margin-bottom: 20px;
 }

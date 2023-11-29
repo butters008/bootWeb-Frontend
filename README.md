@@ -1,4 +1,19 @@
-# bootWeb-Frontend
- This was coded at my time when I was enrolled in a bootcamp.  This code will be public and made use for educational purpose and will be coninutally added to as I learn new things in and out of bootcamp.  This repo will forcus more on the FRONT-END and learning how to properly do FRONT-END.  
- 
- There might be some basic back-end, for data management and dynamic loading of information.  However, this will focus more on user experienc than proper data management.
+# Butterfield's Fullstack Testing Technologies Repo
+
+This repo/project will house all of the frontend learning and experimental material and code. I want this to be a long running repo where I continue to add and experiment with new and old technologies.
+
+### Technologies - Current Use
+
+- HTML(5)
+- CSS
+- JavaScript
+
+### Technologies - Future Use
+
+- Php (backend)
+- Tailwind
+- Go (backend)
+
+### NOTICE
+
+Some pages may look incomplete, this is by design because some pages may exist to hold JS or backend logic

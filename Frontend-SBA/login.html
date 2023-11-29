@@ -6,39 +6,30 @@
 
 <script>
 $(document).ready(function() { $('#header').load('header.html'); });
+$(document).ready(function() { $('#footer').load('footer.html'); });
 
 function validate(){
-    let name = document.getElementById('firstNameId').value;
-    console.log("It worked");
+    let name = document.getElementById('name').value;
+    let password = document.getElementById('password').value;
+    checkCredentials(name, password);
 }
-
 </script>
 
+<script src="js/User.js"></script>
+<script src="js/UserFakeAuth.js"></script>
+
+
 <div id="header"></div>
-<main>
+<main class="mainContainer">
+  <form class="formContainer">
+    <label for="name">Name</label>
+    <input class="formInput" type="text" name="name" id="name" placeholder="JohnDoe">
+    <label for="password">Password</label>
+    <input class="formInput" type="password" name="password" id="password">
 
-  <form class="form-signin" action="web.html">
-    <div class="container ">
-        <div class="row d-flex justify-content-center customFormContainerStyle">
-            <div class="col col-4 text-center">
-                <label for="email"><strong>email</strong></label>
-                <input class="form-control" type="text" name="email" id="email" placeholder="John@john.com">
-                <div id="errorEmail"></div>        
-            </div>
-        </div>
-        <div class="row d-flex justify-content-center customFormContainerStyle">
-            <div class="col col-4 text-center">
-                <label for="password"><strong>Password</strong></label>
-                <input class="form-control" onfocusout="validatePassword()" type="password" name="password" id="password" placeholder="password">
-                <span id="errorPassword"></span>
-            </div>
-        </div>
-    </div><br>
-    <div class="col-1 mx-auto">
-        <button class="btn btn=lg btn-primary btn-block" type="submit" id="login">submit</button>
-    </div>
-
+    <button onclick="validate()" type="button">login </button>
 </form>
+
     
 <script src="js/loginLogic.js"></script>
 
@@ -46,4 +37,6 @@ function validate(){
 
     
 </body>
+<!-- Need this here for the JQuery to work with footer.html and index.html -->
+<div id="footer"></div>
 </html>
