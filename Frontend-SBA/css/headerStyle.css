@@ -132,3 +132,29 @@ label #menuCancel {
 #check:checked ~ section {
   margin-left: 250px;
 }
+
+#LogoutButton {
+  list-style: none;
+}
+
+#LogoutButton a {
+  display: block;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: var(--otherColor);
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.4s ease;
+  text-decoration: none;
+}
+
+#LogoutButton:hover a {
+  padding-left: 50px;
+}
+
+#LogoutButton a i {
+  margin-right: 16px;
+}

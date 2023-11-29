@@ -6,14 +6,13 @@
 
 <script>
 $(document).ready(function() { $('#header').load('header.html'); });
-
+$(document).ready(function() { $('#footer').load('footer.html'); });
 
 function validate(){
     let name = document.getElementById('name').value;
     let password = document.getElementById('password').value;
     checkCredentials(name, password);
 }
-
 </script>
 
 <script src="js/User.js"></script>
@@ -38,4 +37,6 @@ function validate(){
 
     
 </body>
+<!-- Need this here for the JQuery to work with footer.html and index.html -->
+<div id="footer"></div>
 </html>

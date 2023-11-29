@@ -44,7 +44,21 @@
         <li>
           <a href="register.html">Register</a>
         </li>
+
+        <li>
+          <a href="login.html" onclick="logoutUser()">Logout</a>
+        </li>
       </ul>
     </nav>
   </body>
+  <script>
+    console.log("navbar", localStorage.getItem("correctUser"));
+    if (localStorage.getItem("correctUser") == "true") {
+      console.log("Inside IF");
+    }
+
+    const logoutUser = () => {
+      localStorage.removeItem("correctUser");
+    };
+  </script>
 </html>
