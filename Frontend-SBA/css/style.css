@@ -19,16 +19,24 @@ body {
   width: 60%;
   min-height: 10%;
   margin: auto;
-  padding-top: 2em;
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+
+.innerMainContainer {
   display: grid;
+  grid-template-columns: 0.7fr 1.2fr;
+  grid-template-areas:
+    "TOP TOP"
+    "LEFT RIGHT";
 }
 
 /* This is for the loginForm */
 .formContainer {
   text-align: center;
   display: flex;
-  align-items: center;
   justify-content: center, space-between;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -37,4 +45,40 @@ body {
   text-align: center;
   border-radius: 3px;
   margin-bottom: 20px;
+}
+
+.TOP {
+  grid-area: TOP;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.LEFT {
+  grid-area: LEFT;
+  min-height: 10%;
+  background-color: aqua;
+}
+
+.AnimalForm {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-content: center; */
+  padding: 25px 5px 15px 2px;
+  width: 80%;
+  margin: auto;
+}
+
+.AnimalFormButton {
+  width: 30%;
+  margin: auto;
+}
+
+.RIGHT {
+  grid-area: RIGHT;
+  background-color: beige;
 }

@@ -35,14 +35,38 @@ $(document).ready(function() { $('#footer').load('footer.html'); });
     RIGHT -> will be the list of all the animals 
     TOP - Will be the count of total herd, cow, bull, and calf count 
   -->
-  <div class="TOP">
-    test
-    <button onclick="checkCredentials('JohnDoe', 'password')">login</button>
+  <div class="innerMainContainer">
+    <div class="TOP">
+      <label for="">Total Herd</label>
+      <span id="herd"></span>
+      <label for="">Total Cows</label>
+      <span id="cows"></span>
+      <label for="">Total Bulls</label>
+      <span id="bulls"></span>
+      <label for="">Total Calves</label>
+      <span id="calves"></span>
+      <div>2024</div>
+    </div>
+    <div class="LEFT">
+      <form action="" class="AnimalForm">
+        <label for="id1">ID 1</label>
+        <input type="text" name="id1" id="id1">
+        <label for="id2">ID 2</label>
+        <input type="text" name="id2" id="id2">
+        <label for="dob">Date of Birth</label>
+        <input type="date" name="dob" id="dob">
+        <label for="breed">Breed</label>
+        <input type="text" name="breed" id="breed">
+        <label for="type">Sex</label>
+        <input type="text" name="type" id="type">
+  
+        <button type="button" class="AnimalFormButton">Add</button>
+      </form>
+  
+    </div>
+    <div class="RIGHT"></div>
   </div>
-  <div class="LEFT">
 
-  </div>
-  <div class="RIGHT"></div>
   
 </main>
 </body>
