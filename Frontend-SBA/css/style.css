@@ -59,7 +59,7 @@ body {
 .LEFT {
   grid-area: LEFT;
   min-height: 10%;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 .AnimalForm {
@@ -80,5 +80,5 @@ body {
 
 .RIGHT {
   grid-area: RIGHT;
-  background-color: beige;
+  /* background-color: beige; */
 }
